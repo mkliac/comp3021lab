@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
-public class Folder implements Comparable<Folder>{
+public class Folder implements Comparable<Folder>,java.io.Serializable{
 	private ArrayList<Note> notes;
 	private String name;
 	
