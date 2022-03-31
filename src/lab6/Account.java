@@ -35,13 +35,7 @@ public class Account {
 
 	// TODO: Task3 
 	// replace the null with a lambda expression
-	public static AddMaker maker = new AddMaker() {
-		@Override
-		public Consumer<Account> make(int N){
-			Consumer<Account> addN = a -> a.balance += N;
-			return addN;
-		};
-	};
+	public static AddMaker maker = N -> (a -> a.balance += N);
 
 
 	// You can assume that all the Account in acconts have positive balances.
