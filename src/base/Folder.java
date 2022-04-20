@@ -97,4 +97,14 @@ public class Folder implements Comparable<Folder>,java.io.Serializable{
 	public int compareTo(Folder o) {
 		return this.name.compareTo(o.name);
 	}
+	
+	public boolean removeNotes(String title) {
+		for(Note n : notes) {
+			if(n.getTitle().equals(title)) {
+				notes.remove(n);
+				return true;
+			}
+		}
+		return false;
+	}
 }

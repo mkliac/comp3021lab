@@ -101,4 +101,8 @@ public class NoteBook implements java.io.Serializable{
 			e.printStackTrace();
 		}
 	}
+	
+	public void addFolder(String folderName) {
+		folders.add(new Folder(folderName));
+	}
 }
