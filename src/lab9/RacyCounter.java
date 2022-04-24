@@ -4,7 +4,6 @@ public class RacyCounter {
 
 	int counter = 0;
 	final static int ITERATIONS = 10000000; /// do not change this
-	private Object lock = new Object();
 
 	public static void main(String[] args) throws Throwable {
 		new RacyCounter().runTest();
@@ -34,7 +33,7 @@ public class RacyCounter {
 		public void run(){
 			for (int i = 0; i < ITERATIONS; i++) {
 				//add synchronization here
-				synchronized(lock) {
+				synchronized(MyTask.class) {
 					int temp = counter;
 					counter = temp +1;
 				}
